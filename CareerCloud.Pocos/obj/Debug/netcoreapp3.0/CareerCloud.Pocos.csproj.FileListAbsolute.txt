@@ -1,0 +1,24 @@
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.deps.json
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.csprojAssemblyReference.cache
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfoInputs.cache
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfo.cs
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Sandra\Desktop\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.deps.json
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfoInputs.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfo.cs
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.csprojAssemblyReference.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.deps.json
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfoInputs.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.AssemblyInfo.cs
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.Pocos\obj\Debug\netcoreapp3.0\CareerCloud.Pocos.csprojAssemblyReference.cache

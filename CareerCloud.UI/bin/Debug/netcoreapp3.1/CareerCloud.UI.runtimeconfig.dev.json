@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Bridan\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Bridan\\.nuget\\packages"
+    ]
+  }
+}

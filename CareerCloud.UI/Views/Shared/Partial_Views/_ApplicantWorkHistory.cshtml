@@ -1,0 +1,74 @@
+﻿@model IEnumerable<CareerCloud.Pocos.ApplicantWorkHistoryPoco>
+
+<h4>Work Experience</h4>
+@{
+    if (Model.Count() < 1)
+    {
+        @: <p class="text-danger alert-warning">No Work History Found for this Applicant. </p>
+           <p><a asp-action="Create" asp-controller="ApplicantWorkHistory" asp-route-Applicant="@ViewData["Applicant"]">Create New Record</a></p>
+        return;
+    }
+}
+<p>
+    <a asp-action="Create" asp-controller="ApplicantWorkHistory" asp-route-Applicant="@Model.First().Applicant">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+                @{ int i = 0;}
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </th>
+            <th>
+                Start
+            </th>
+            <th>
+                End
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        ++i;
+                        @:@i
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartMonth) /
+                    @Html.DisplayFor(modelItem => item.StartYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndMonth) /
+                    @Html.DisplayFor(modelItem => item.EndYear)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="ApplicantWorkHistory" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-controller="ApplicantWorkHistory" asp-route-id="@item.Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

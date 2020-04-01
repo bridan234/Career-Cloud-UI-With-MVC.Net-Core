@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CareerCloud.Pocos.ApplicantSkillPoco>
+
+<h4>Related Skills</h4>
+@{
+    if (Model.Count() < 1)
+    {
+        @: <p class="alert-warning">No Skill Found for this Applicant. </p>
+           <a asp-action="Create" asp-controller="applicantskill" asp-route-Applicant="@ViewData["Applicant"]">Enter New Skill</a>
+        return;
+    }
+}
+<p>
+    <a asp-action="Create" asp-controller="applicantskill" asp-route-Applicant ="@Model.First().Applicant">Add Skill</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Skill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SkillLevel)
+            </th>
+            <th align="center">
+                Start
+            </th>
+            <th align="center"> 
+                End
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Skill)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SkillLevel)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.StartMonth) /
+                    @Html.DisplayFor(modelItem => item.StartYear)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.EndMonth) /
+                    @Html.DisplayFor(modelItem => item.EndYear)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="applicantskill" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-controller="applicantskill" asp-route-id="@item.Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

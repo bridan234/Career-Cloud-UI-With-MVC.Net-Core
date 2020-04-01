@@ -1,0 +1,61 @@
+﻿@model CareerCloud.Pocos.ApplicantProfilePoco
+
+@{
+    ViewData["Title"] = @Model.SecurityLogin.FullName;
+}
+
+<h1>@Model.SecurityLogin.FullName</h1>
+<br />
+
+<div>
+    <h4>
+        Complete Resume
+        <a class="btn-link  btn-sm" asp-action="Index">Back to List</a>
+    </h4>
+    <hr />
+    <br />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CurrentSalary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Currency)
+            @Html.DisplayFor(model => model.CurrentSalary)
+        </dd>
+        <dt class="col-sm-2">
+            Address
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Street),<br />
+            @Html.DisplayFor(model => model.City),
+            @Html.DisplayFor(model => model.Province).  <br />
+            @Html.DisplayFor(model => model.Country).
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+        <dt class="col-sm-2">
+            Login Id
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SecurityLogin.Login)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn-link" asp-action="Edit" asp-route-Id="@Model.Id">Edit Profile</a>
+
+</div>
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantResume.cshtml", Model.ApplicantResume,new ViewDataDictionary(ViewData){ { "emp", Model.Id } })
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantSkills.cshtml", Model.ApplicantSkills, new ViewDataDictionary(ViewData){ { "Applicant", Model.Id } })
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantEducation.cshtml", Model.ApplicantEducations, new ViewDataDictionary(ViewData){ { "Applicant", Model.Id } })
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantWorkHistory.cshtml", Model.ApplicantWorkHistories, new ViewDataDictionary(ViewData){ { "Applicant", Model.Id } })
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantJobApplications.cshtml", Model.ApplicantJobApplications, new ViewDataDictionary(ViewData){ { "Applicant", Model.Id } })

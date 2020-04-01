@@ -1,0 +1,16 @@
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.deps.json
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.AssemblyInfo.cs
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.deps.json
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.AssemblyInfo.cs
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.DataAccessLayer\obj\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.csprojAssemblyReference.cache

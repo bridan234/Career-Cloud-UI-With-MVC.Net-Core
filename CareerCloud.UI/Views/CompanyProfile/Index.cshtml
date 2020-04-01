@@ -1,0 +1,86 @@
+﻿@model IEnumerable<CareerCloud.Pocos.CompanyProfilePoco>
+@using CareerCloud.Pocos;
+@using CareerCloud.EntityFrameworkDataAccess;
+
+@{
+    ViewData["Title"] = "Companies";
+    if (Model.Count() < 1)
+    {
+        @:No Record Found
+        return;
+    }
+    
+}
+
+<h1>Companies</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                #
+                @{ int i = 1;}
+            </th>
+            <th>
+                Company
+                @*@Html.DisplayNameFor(model => model.Id)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </th>
+            <th style="width: 250px">
+                @Html.DisplayNameFor(model => model.CompanyWebsite)
+            </th>
+            <th style="width: 200px">
+                @Html.DisplayNameFor(model => model.ContactPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactName)
+            </th>
+            <th style="width: 250px">...</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td> 
+
+                    @{
+                        string Name = "";
+                        try { Name = item.CompanyDescriptions.Where(c => c.Company == item.Id).FirstOrDefault().CompanyName; }
+                        catch(Exception e) {
+                            Name = "<No Name>";
+                        }
+                    }
+                    
+                    @Html.ActionLink(Name, "Details", new { id=item.Id})
+                    
+                    @{i++;}
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationDate)
+                </td>
+                <td style="width: 250px">
+                    <a target="_blank" href="@item.CompanyWebsite">@item.CompanyWebsite</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactName)
+                </td>
+                <td style="width: 250px">
+                    @Html.ActionLink("Details", "Details", new { Id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { Id=item.Id  })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

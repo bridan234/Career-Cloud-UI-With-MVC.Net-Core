@@ -1,0 +1,26 @@
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.deps.json
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.csprojAssemblyReference.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.deps.json
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\bin\Debug\netcoreapp3.0\CareerCloud.Pocos.pdb
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.csprojAssemblyReference.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.dll
+C:\Users\Bridan\source\repos\CareerCloud2\CareerCloud.BusinessLogicLayer\obj\Debug\netcoreapp3.0\CareerCloud.BusinessLogicLayer.pdb

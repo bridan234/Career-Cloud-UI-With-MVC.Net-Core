@@ -1,0 +1,54 @@
+﻿@model CareerCloud.Pocos.CompanyJobPoco
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Company Job Posting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <select asp-for="Company" class="form-control" asp-items="ViewBag.Company" disabled><option value=""> -|- Select Company -|- </option></select>
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyJobDescription.JobName" class="control-label"></label>
+                <input asp-for="CompanyJobDescription.JobName" class="form-control" />
+                <span asp-validation-for="CompanyJobDescription.JobName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyJobDescription.JobDescriptions" class="control-label"></label>
+                <input asp-for="CompanyJobDescription.JobDescriptions" class="form-control" />
+                <span asp-validation-for="CompanyJobDescription.JobDescriptions" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsInactive" /> @Html.DisplayNameFor(model => model.IsInactive)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsCompanyHidden" /> @Html.DisplayNameFor(model => model.IsCompanyHidden)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-controller="companyjobdescription" asp-route-Id="@Model.Id">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

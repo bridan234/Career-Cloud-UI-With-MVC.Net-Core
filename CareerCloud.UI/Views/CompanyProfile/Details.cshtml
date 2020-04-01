@@ -1,0 +1,71 @@
+﻿@model CareerCloud.Pocos.CompanyProfilePoco
+
+@{
+    ViewData["Title"] = "Details";
+    var CompLoc = Model.CompanyLocations.FirstOrDefault();
+
+    var Address = CompLoc is null ? "" : $"{CompLoc.Street} {CompLoc.City}\n{CompLoc.Province} {CompLoc.CountryCode}\n{CompLoc.PostalCode}";
+
+}
+
+<h1>
+    @{ 
+        var Name = Model.CompanyDescriptions.Count() <= 0 ? "" : Model.CompanyDescriptions.FirstOrDefault().CompanyName;
+        @:@Name
+    }
+</h1>
+
+<div>
+    <h4>Company Profile</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.HiddenFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.HiddenFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompanyWebsite)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompanyWebsite)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactPhone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContactPhone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContactName)
+        </dd>
+        <dt class="col-sm-2">
+            Location
+        </dt>
+        <dd class="col-sm-10">
+            @Address
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  Id = Model.Id }) | 
+    @Html.ActionLink("Delete Company", "Delete", new {  Id = Model.Id  }) | 
+    <a asp-action="Index">Back to List</a>
+</div>
+<hr />
+<br />
+<h4>Locations</h4>
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_CompanyDescription.cshtml", Model.CompanyDescriptions, new ViewDataDictionary(ViewData) { {"Company",Model.Id } })
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_CompanyJob.cshtml", Model.CompanyJobs, new ViewDataDictionary(ViewData) { {"Company",Model.Id } })

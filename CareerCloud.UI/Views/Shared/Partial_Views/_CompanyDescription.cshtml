@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CareerCloud.Pocos.CompanyDescriptionPoco>
+@using CareerCloud.EntityFrameworkDataAccess;
+@using CareerCloud.Pocos;
+
+@{
+    if (Model.Count() < 1)
+    {
+        @: <p class="text-danger alert-warning">No record found for this Company. </p>
+        <a asp-action="Create" asp-controller="companydescription" asp-route-Company="@ViewData["Company"]" >Enter New Record</a>
+        return;
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyDescription)
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SystemLanguageCode)
+            </th>
+            <th>...</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyDescription)
+                </td>
+                <td>
+                    @{
+                        var CompLoc = "";
+
+                        var Loc = new EFGenericRepository<CompanyLocationPoco>()
+                                .GetAll(o => o.CompanyProfile).FirstOrDefault(c => c.Company == item.Company);
+
+                        CompLoc = Loc is null ? "<empty>" : $"{Loc.City} {Loc.Province}, {Loc.CountryCode}";
+                    }
+                    @CompLoc
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LanguageId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="companydescription"  asp-route-Id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

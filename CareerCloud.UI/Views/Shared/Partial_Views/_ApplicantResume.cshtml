@@ -1,0 +1,23 @@
+﻿@model CareerCloud.Pocos.ApplicantResumePoco
+
+    <div>
+        <h4>Professional Summary</h4>
+        <hr />
+        @{
+            if (Model is null)
+            {
+                @: <p class="text-danger alert-warning">No Summary Written yet. </p> 
+                   <a asp-action="Create" asp-controller="ApplicantResume" asp-route-Applicant="@ViewData["emp"]">Update your summary Now!</a> 
+                return;
+            }
+        }
+    <p>@Html.DisplayFor(model => model.Resume).</p>
+    
+    <strong>@Html.DisplayNameFor(model => model.LastUpdated):</strong>   
+    @Html.DisplayFor(model => model.LastUpdated)
+            
+    </div>
+<br />
+<div>
+    <a asp-action="Edit" asp-controller="applicantresume" asp-route-id="@Model.Id">Edit Bio</a>
+</div>

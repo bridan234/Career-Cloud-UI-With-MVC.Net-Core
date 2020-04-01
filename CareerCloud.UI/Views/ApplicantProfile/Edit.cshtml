@@ -1,0 +1,100 @@
+﻿@model CareerCloud.Pocos.ApplicantProfilePoco
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>@Model.SecurityLogin.FullName</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="SecurityLogin.FullName" class="control-label"></label>
+                <input asp-for="SecurityLogin.FullName" class="form-control" />
+                <span asp-validation-for="SecurityLogin.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityLogin.EmailAddress" class="control-label"></label>
+                <input asp-for="SecurityLogin.EmailAddress" class="form-control" />
+                <span asp-validation-for="SecurityLogin.EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityLogin.PhoneNumber" class="control-label"></label>
+                <input asp-for="SecurityLogin.PhoneNumber" class="form-control" />
+                <span asp-validation-for="SecurityLogin.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityLogin.Login" class="control-label"></label>
+                <input asp-for="SecurityLogin.Login" class="form-control"  />
+                <span asp-validation-for="SecurityLogin.Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityLogin.Password" class="control-label"></label>
+                <input asp-for="SecurityLogin.Password" class="form-control" placeholder="Enter your current Password" />
+                <span asp-validation-for="SecurityLogin.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecurityLogin.PrefferredLanguage" class="control-label"></label>
+
+                <select asp-for="SecurityLogin.PrefferredLanguage" class="form-control" asp-items="ViewBag.Language">
+                    <option value="">-- Select Language --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentSalary" class="control-label"></label>
+                <input asp-for="CurrentSalary" class="form-control" />
+                <span asp-validation-for="CurrentSalary" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CurrentRate" class="control-label"></label>
+                <input asp-for="CurrentRate" class="form-control" />
+                <span asp-validation-for="CurrentRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency" class="control-label"></label>
+                <input asp-for="Currency" class="form-control" />
+                <span asp-validation-for="Currency" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <select asp-for="Country" class="form-control" asp-items="ViewBag.Country"><option value="">-- Select Country --</option></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Province" class="control-label"></label>
+                <input asp-for="Province" class="form-control" />
+                <span asp-validation-for="Province" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Street" class="control-label"></label>
+                <input asp-for="Street" class="form-control" />
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn-warning" asp-action="Details" asp-route-Id="@Model.Id">Cancel</a>
+</div>
+

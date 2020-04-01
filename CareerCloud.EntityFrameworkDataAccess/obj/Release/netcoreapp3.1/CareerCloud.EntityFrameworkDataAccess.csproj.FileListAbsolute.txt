@@ -1,0 +1,13 @@
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.deps.json
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.DataAccessLayer.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.Pocos.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.DataAccessLayer.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\bin\Release\netcoreapp3.1\CareerCloud.Pocos.pdb
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.csprojAssemblyReference.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.AssemblyInfoInputs.cache
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.AssemblyInfo.cs
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.csproj.CopyComplete
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.dll
+C:\Users\Bridan\OneDrive\Documents\Humber Tasks, Projects and Docs\CareerCloud\CareerCloud.EntityFrameworkDataAccess\obj\Release\netcoreapp3.1\CareerCloud.EntityFrameworkDataAccess.pdb

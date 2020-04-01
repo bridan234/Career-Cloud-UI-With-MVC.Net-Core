@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CareerCloud.Pocos.CompanyJobPoco>
+@using CareerCloud.EntityFrameworkDataAccess;
+@using CareerCloud.Pocos;
+
+<h4>Posted Jobs</h4>
+@{
+    if (Model.Count() < 1)
+    {
+        @: <p class="text-danger alert-warning">No Job has been Posted yet for theis Company </p>
+        <a asp-action="Create" asp-controller="companyjob" asp-route-Company="@ViewData["Company"]">Create new job position</a>
+        return;
+    }
+}
+<p>
+    <a asp-action="Create" asp-controller="companyjob" asp-route-Company="@Model.First().Company">Post New Job</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Job
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsInactive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>
+
+                    @{
+                        var JobName = "";
+
+                        var JobDesc = new EFGenericRepository<CompanyJobDescriptionPoco>()
+                                .GetAll(o => o.CompanyJob).FirstOrDefault(c => c.Job == item.Id && c.CompanyJob.Company == item.Company);
+
+                        JobName = JobDesc is null ? "<empty>" : JobDesc.JobName;
+                    }
+                    @Html.ActionLink(JobName, "Details", "CompanyJobDescription", new { Id = JobDesc is null ? new Guid()  : JobDesc.Id }, null)
+                </td>
+                <td>
+
+                    @{
+                        // new CareerCloud.Pocos.CompanyLocationPoco();
+                        string Address;
+                        try
+                        {
+                            var CompLoc = Model.FirstOrDefault()
+                                .CompanyProfile.CompanyLocations.FirstOrDefault
+                                    (j => j.Company == Model.FirstOrDefault().Company);
+
+                            Address = CompLoc is null ? "" : $"{CompLoc.Street} {CompLoc.City}\n{CompLoc.Province} {CompLoc.CountryCode}\n{CompLoc.PostalCode}";
+
+                        }
+                        catch (Exception e) { Address = ""; };
+                        @:@Address
+                    }
+                    @Address
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfileCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsInactive)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit","companyjob", new { Id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete","companyjob", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

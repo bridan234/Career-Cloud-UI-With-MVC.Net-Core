@@ -1,0 +1,14 @@
+﻿@model IEnumerable<CareerCloud.Pocos.ApplicantSkillPoco>
+
+@{
+    ViewData["Title"] = "Skills";
+    var Name = "";
+    Name = Model.Count() <= 0 ? " " : Model.FirstOrDefault().ApplicantProfile.SecurityLogin.FullName;
+}
+
+<h1>@Name</h1>
+
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_ApplicantSkills.cshtml", new ViewDataDictionary (ViewData){{ "Applicant", ViewData["Id"]} })
+<div>
+    <a class="btn-block" asp-action="Index" asp-controller="applicantprofile">Back To List</a>
+</div>

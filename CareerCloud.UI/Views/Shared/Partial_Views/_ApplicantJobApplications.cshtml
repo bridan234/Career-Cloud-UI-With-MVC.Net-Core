@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CareerCloud.Pocos.ApplicantJobApplicationPoco>
+
+
+<h4>Job Applications</h4>
+@{
+    if (Model.Count() < 1)
+    {
+        @: <p class="text-danger alert-warning">No Job Application Found for this Applicant. </p>
+            <a asp-action="Create" asp-controller="ApplicantJobApplication" asp-route-Applicant="@ViewData["Applicant"]"> Apply for a new Job </a>;
+        return;
+    }
+}
+<p>
+    <a asp-action="Create" asp-controller="ApplicantJobApplication" asp-route-Applicant="@Model.First().Applicant">Apply for new Job</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#@{int i = 0;}</th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyJob.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyJob.CompanyProfile.CompanyLocations)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @{
+                    var CompJob = new CareerCloud.EntityFrameworkDataAccess.EFGenericRepository<CareerCloud.Pocos.CompanyJobPoco>().GetList(k => k.Id == item.Job,
+                                                o => o.CompanyJobDescription,
+                                                i => i.CompanyProfile.CompanyDescriptions,
+                                                k => k.CompanyProfile.CompanyLocations).FirstOrDefault();
+
+                    var JobName = "";
+                    var CompName = "";
+                    var JobLoc = "";
+
+                    if (CompJob != null)
+                    {
+                        JobName = CompJob.CompanyJobDescription.JobName;
+                        CompName = CompJob.CompanyProfile.CompanyDescriptions.First().CompanyName;
+                        if(CompJob.CompanyProfile.CompanyLocations.Count >0)
+                        JobLoc = CompJob.CompanyProfile.CompanyLocations.Select(g => string.Concat(g.City, g.Province, g.CountryCode)).First().ToString();
+                    }
+                }
+                <td>@{++i;}@i</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationDate)
+                </td>
+                <td>
+                    @JobName
+                </td>
+                <td>
+                    @CompName
+                </td>
+                <td>
+                    @JobLoc
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="ApplicantJobApplication" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-controller="ApplicantJobApplication" asp-route-id="@item.Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

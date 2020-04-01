@@ -1,0 +1,127 @@
+﻿@model CareerCloud.Pocos.CompanyJobDescriptionPoco
+
+@{
+    ViewData["Title"] = "Details";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".btnApply").hide();
+
+        $(".applicants").change(function () {
+            var Vals = $(".applicants option:selected").text();
+            if (Vals == '--Select Applicant--') {
+                $(".btnApply").hide();
+            } else {
+                $(".btnApply").show();
+            }
+            $('#sub').attr("asp-route-Applicant", ($(".applicants option:selected").val()));
+            console.log($('#sub').attr("asp-route-Applicant"));
+        });
+    });
+
+    function getApplicant() {
+        return $('Applicant').val($(".applicants option:selected").val());
+    }
+
+</script>
+
+<style>
+    .btnApply {
+        background-color: #4CAF50;
+        border-radius: 14px;
+        transition-duration: 0.4s;
+    }
+
+        .btnApply:hover {
+            background-color: white; /* Green */
+            color: #4CAF50;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+</style>
+<h1>@Model.JobName</h1>
+<br />
+<div>
+    <div>
+
+        <form asp-action="Create" asp-controller="ApplicantJobApplication" method="post" asp-route-Job="@Model.Job">
+            <div style="float:left">
+                <h4>
+                    Job Descriptions
+                    <button type="submit" class="btn-lg btn-secondary btnApply">Apply</button>
+                </h4>
+                <input type="hidden" id="Applicant" value="b" />
+            </div>
+
+            <div style="float: right">
+                <select name="Applicant" id="applicants" class="form-control applicants" asp-items="ViewBag.Applicants"> <option value="">--Select Applicant--</option></select><br />
+            </div>
+        </form>
+        <br />
+    </div>
+
+    <br />
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JobDescriptions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JobDescriptions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CompanyJob.CompanyProfile.CompanyLocations)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.CompanyJob.CompanyProfile.CompanyLocations != null)
+                @foreach (var item in Model.CompanyJob.CompanyProfile.CompanyLocations)
+                {
+                    //if( item is null) continue;
+                    @:@string.Concat(item.City, item.Province, item.CountryCode),
+                }
+                @*@Html.DisplayFor(model => model.JobDescriptions)*@
+        </dd>
+        <dt class="col-sm-2">
+            Require Education
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string major = "";
+                try
+                {
+                    major = Model.CompanyJob.CompanyJobEducation.Major;
+                }
+                catch { };
+            }
+            @major
+        </dd>
+        <dt class="col-sm-2">
+            Importance
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string importance = "";
+                try
+                {
+                    major = Model.CompanyJob.CompanyJobEducation.Importance.ToString();
+                }
+                catch { };
+            }
+            @importance
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+<hr />
+<br />
+@await Html.PartialAsync("~/Views/Shared/Partial_Views/_CompanyJobSkill.cshtml", Model.CompanyJob.CompanyJobSkills)
+<br />

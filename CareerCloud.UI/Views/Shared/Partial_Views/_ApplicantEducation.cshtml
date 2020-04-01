@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CareerCloud.Pocos.ApplicantEducationPoco>
+
+<h4>Education</h4>
+@{
+    if (Model.Count() < 1 )
+    {
+        @: <p class="text-danger alert-warning">No Education Found for this Applicant. </p>
+           <a asp-action="Create" asp-controller="applicanteducation" asp-route-Applicant="@ViewData["Applicant"]">Add New Record</a>
+        return;
+    }
+}
+<p>
+    <a asp-action="Create" asp-controller="applicanteducation" asp-route-Applicant ="@Model.First().Applicant">Add New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificateDiploma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletionPercent)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Major)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CertificateDiploma)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompletionDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompletionPercent)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="ApplicantEducation" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-controller="ApplicantEducation" asp-route-id="@item.Id">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
